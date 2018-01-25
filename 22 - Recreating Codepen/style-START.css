@@ -43,11 +43,16 @@ h6 {
   border: 1px solid black;
 }
 
-/* Editor */
+/* EDITOR */
 .code {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background: #1b2b34;
+}
+
+.editor {
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .editor__header {
@@ -59,7 +64,26 @@ h6 {
   background: rgba(0, 0, 0, 0.1);
 }
 
-/* Pen Header */
+.editor__code {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.editor__number {
+  display: block;
+  padding: 0 10px;
+}
+
+.editor__input {
+  resize: none;
+  background: none;
+  border: 0;
+  color: grey;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* PEN HEADER */
 
 .pen {
   display: grid;
@@ -81,7 +105,7 @@ h6 {
   display: grid;
 }
 
-/* Buttons */
+/* BUTTONS */
 .button {
   background: var(--grey);
   border: 0;
@@ -106,4 +130,10 @@ h6 {
   position: absolute;
   left: 3px;
   top: 3px;
+}
+
+.settings {
+  padding: 5px;
+  background: #000;
+  border-top: 1px solid grey;
 }
