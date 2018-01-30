@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="stylesheet" href="./responsive-START.css">
-  <title>Responsive Website!</title>
+  <title>Responsive Website with CSS Grid!</title>
 </head>
 
 <body>
@@ -100,7 +100,19 @@
       <img src="https://source.unsplash.com/random/207x210" alt="">
     </section>
   </div>
+  <script>
 
+    const navButton = document.querySelector("button[aria-expanded]");
+
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      console.log(expanded);
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+
+  </script>
 </body>
 
 </html>
